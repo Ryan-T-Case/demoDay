@@ -75,10 +75,7 @@ router
 .route("/logout")
 .post(loginController.logout);
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d265f0654fc08bea16ec9a074df4b5234ce7a74f
 // 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
 // 00-- NOTES --00
 router
