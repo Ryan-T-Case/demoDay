@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {ResponsiveContainer, RadialBarChart, RadialBar, Legend, Tooltip} from "recharts";
 import API from "../../utils/API";
+import "./styles.css";
 
 class AdminDatataviz extends Component {
   state = {
@@ -26,10 +27,12 @@ class AdminDatataviz extends Component {
     let data = [
       {name: 'Guests', count: this.state.users.length, fill: '#8884d8'},
       {name: 'Projects', count: 25, fill: '#83a6ed'},
-      {name: 'Interviews', count: 10, fill: '#8dd1e1'}
+      {name: 'Developers', count: 40, fill: '#8dd1e1'},
+      {name: 'Interviews', count: 10, fill: '#82ca9d'}
     ]
       return (
         <div>
+          <a className="btn btn-large back-button" href="/manage-event">Back To Manage Event</a>
           <div className="container text-center">
             <h1 className="text-center">Event Data</h1>
             <ResponsiveContainer width="100%" height={500}>
