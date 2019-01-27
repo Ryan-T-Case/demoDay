@@ -1,0 +1,18 @@
+.eventLogo{
+    text-align: center;
+}
+.uOfRLogo{
+    height: 10em;
+    width: 21em;
+}
+.project{
+    background-color: inherit;
+box-shadow: 0px 7px 10px 0px dimgrey;
+/* background-image: linear-gradient(to right, rgba(255,0,0,0), #CF5360); */
+color: ghostwhite;
+font-size: 4vw;
+font-family: "News Cycle", "Arial Narrow", sans-serif;
+overflow: hidden;
+padding: 0 0 4px;
+
+}

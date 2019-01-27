@@ -1,0 +1,63 @@
+.projectCheck{
+    position: absolute;
+    float: right;
+        /* border: inset 2px; */
+    }
+    .img-container{
+    height: 80%;
+    width: 32%;
+    /* border: inset 2px; */
+    position: absolute;
+    float: left;
+    /* border-radius: 70px; */
+    }
+    .devImg{
+        height: 100;
+    width: 100%;
+    position: relative;
+    /* filter: box-shadow (2px 2px 2px pink); */
+    /* z-index: -; */
+    }
+    .devItem{
+        background: #276EA9;
+        box-shadow: 1px 1px 7px 0px dimgrey;
+        background-image: -webkit-linear-gradient(left, rgba(255,0,0,0), #CF5360);
+        background-image: linear-gradient(to right, rgba(255,0,0,0), 30% #CF5360);
+        font-size: 4vw;
+        font-family: "News Cycle", "Arial Narrow", sans-serif;
+        overflow: hidden;
+        padding: 0 0 29px;
+        margin-bottom: 10px;
+        color: ghostwhite;
+    }
+    /* .card{
+        /* background-color: #B37D4E; */
+    /* box-shadow: 0px 2px 1px; */
+    /* font-size: 20px; */
+    /* font-family: "News Cycle", "Arial Narrow Bold", sans-serif; */
+    /* font-weight: 700; */
+    /* color: #276EA9; */
+    /* } */
+    .content{
+    position: relative;
+    text-align: right;
+        /* clear: both; */
+    }
+    .devIcons{
+    height: 40px;
+    width: 40px;
+    }
+    .devName{
+        /* text-decoration: underline; */
+        text-shadow: 1px 1px 1px black;
+        /* z-index: 1; */
+    }
+    .contactIcon{
+    height: 60px;
+    width: 40px;
+    }
+    /* .contactLinks{
+    float: right;
+    position: relative;
+    bottom: 2em;
+    } */

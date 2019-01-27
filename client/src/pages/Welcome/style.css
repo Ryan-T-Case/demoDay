@@ -1,0 +1,12 @@
+body {
+    background-color: antiquewhite;
+    background: linear-gradient(antiquewhite, #CF5360);
+
+}
+.welcomeImg {
+    width: 240px;
+    height: 200px;
+}
+.welcomeImgDiv {
+text-align: center;
+}

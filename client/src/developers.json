@@ -1,0 +1,167 @@
+[
+    {
+        "id": 1,
+        "name": "Nicholas Angelo Batten",
+        "github_link": "https://github.com/Nicholasangelo",
+        "linkedin_link": "https://www.linkedin.com/in/nicholas-angelo-batten-07ba41a/",
+        "portfolio_link": "nicholasangelo.github.io",
+        "phone_number": "18045230218",
+        "imageURL": "https://nicholasangelo.github.io/images/selfieNick.jpg"
+      },
+      {
+      "id": 2,
+      "name": "Ryan Case",
+      "github_link": "https://github.com/Ryan-T-Case",
+      "linkedin_link": "https://www.linkedin.com/in/ryan-case-2591ba168/",
+      "portfolio_link": "https://evening-depths-16074.herokuapp.com/",
+      "phone_number": "18042986698",
+      "imageURL": "https://media.licdn.com/dms/image/C4E03AQF1LXUWHJ5KqA/profile-displayphoto-shrink_800_800/0?e=1553126400&v=beta&t=-lwbzHqXPg-Fm6zhWDbYCE5wxCFoWatTBNC4h3cY44Q"
+    },
+    {
+    "id": 3,
+      "name": "Steve Carpenter",
+      "github_link": "https://github.com/Steven-M-Carpenter",
+      "linkedin_link": "https://www.linkedin.com/in/stevecarpenter5/",
+      "portfolio_link": "https://steven-m-carpenter.github.io/PersonalPortfolio/",
+      "phone_number": "",
+      "imageURL": "https://steven-m-carpenter.github.io/PersonalPortfolio/assets/images/Steve_Carpenter.jpg"
+    },
+    {
+      "id": 4,
+        "name": "Rich ",
+        "github_link": "https://github.com/LandrumTrev",
+        "linkedin_link": "https://www.linkedin.com/in/rich-trevillian/",
+        "portfolio_link": "",
+        "phone_number": "",
+        "imageURL": "https://avatars3.githubusercontent.com/u/30249360?s=460&v=4"
+    },
+    {
+      "id": 5,
+        "name": "Jenny Liang",
+        "github_link": "https://github.com/JennyLiang804",
+        "linkedin_link": "https://www.linkedin.com/in/jennyliang804/",
+        "portfolio_link": "https://jennyliang804.github.io/Official-portfolio/",
+        "phone_number": "18047260917",
+        "imageURL": "https://jennyliang804.github.io/Official-portfolio/images/bio-pic.jpg"
+    },  
+    {
+        "id": 6,
+        "name": "Melissa Dericott",
+        "github_link": "https://github.com/MDerricott",
+        "linkedin_link": "https://www.linkedin.com/in/mljennings/",
+        "portfolio_link": "",
+        "phone_number": "8049558622",
+        "imageURL": "https://media.licdn.com/dms/image/C4D03AQGYL-vGed0esw/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=rhrRpqkfcsikKl6bIwq0tGueoHZzy2_F2Ba8Cq7JHXs"
+    },
+    {
+        "id": 7,
+        "name": "Alex Silvester",
+        "github_link": "https://github.com/Hordakai/",
+        "linkedin_link": "https://www.linkedin.com/in/aosilvester/",
+        "portfolio_link": "https://aosilvester.github.io/",
+        "phone_number": "18043052716",
+        "imageURL": "https://media.licdn.com/dms/image/C4D03AQGYL-vGed0esw/profile-displayphoto-shrink_800_800/0?e=1553731200&v=beta&t=rhrRpqkfcsikKl6bIwq0tGueoHZzy2_F2Ba8Cq7JHXs"
+    },
+    {
+        "id": 8,
+        "name": "Tricia Norris",
+        "github_link": "",
+        "linkedin_link": "",
+        "portfolio_link": "",
+        "phone_number": "",
+        "imageURL": ""
+    },
+    {
+        "id": 8,
+        "name": "Renée Grinnell",
+        "github_link": "",
+        "linkedin_link": "https://www.linkedin.com/in/ren%C3%A9e-grinnell-ms-209211132/",
+        "portfolio_link": "",
+        "phone_number": "16037851885",
+        "imageURL": ""
+    },
+    {
+        "id": 8,
+        "name": "Alex Esch",
+        "github_link": "https://github.com/Hordakai/APA-mobile-menu-ordering",
+        "linkedin_link": "https://www.linkedin.com/in/alexander-esch-37b69a62/",
+        "portfolio_link": "https://hordakai.github.io/bootstrap-responsive-project/index.html",
+        "phone_number": "",
+        "imageURL": ""
+    },
+    {
+        "id": 8,
+        "name": "Patrick Chu",
+        "github_link": "https://github.com/Hordakai/APA-mobile-menu-ordering",
+        "linkedin_link": "https://www.linkedin.com/in/alexander-esch-37b69a62/",
+        "portfolio_link": "https://hordakai.github.io/bootstrap-responsive-project/index.html",
+        "phone_number": "",
+        "imageURL": ""
+     },
+     {
+       "id": 8,
+        "name": "Jeremy Hancock",
+        "github_link": "https://github.com/JeremyHancock",
+        "linkedin_link": "https://www.linkedin.com/in/jeremy-hancock-9bab6a64/",
+        "portfolio_link": "https://jeremyhancock.github.io/portfolio/index.html",
+        "phone_number": "18049383949",
+        "imageURL": ""
+      },
+      {
+        "id": 8,
+        "name": "David Stocker",
+        "github_link": "https://github.com/dbstocker",
+        "linkedin_link": "https://www.linkedin.com/in/david-stocker-aa207711/",
+        "portfolio_link": "https://dbstocker.github.io/coffee-metal-code/",
+        "phone_number": "",
+        "imageURL": ""
+      },
+      {
+        "id": 8,
+        "name": "David Sweck",
+        "github_link": "",
+        "linkedin_link": "",
+        "portfolio_link": "",
+        "phone_number": "",
+        "imageURL": ""
+      },
+      {
+        "id": 8,
+        "name": "Tim Dolanm",
+        "github_link": "https://github.com/tdolan21/blockGames2",
+        "linkedin_link": "",
+        "portfolio_link": "",
+        "phone_number": "",
+        "imageURL": ""
+      },
+      {
+        "id": 8,
+        "name": "Sam Liput",
+        "github_link": "https://github.com/sgliput",
+        "linkedin_link": "https://www.linkedin.com/in/samuel-liput-b04b49166/",
+        "portfolio_link": "",
+        "phone_number": "",
+        "imageURL": "https://avatars2.githubusercontent.com/u/41445014?s=460&v=4"
+      },
+      {
+        "id": 8,
+        "name": " ",
+        "github_link": "",
+        "linkedin_link": "",
+        "portfolio_link": "",
+        "phone_number": "",
+        "imageURL": ""
+      },
+      {
+        "id": 8,
+        "name": " ",
+        "github_link": "",
+        "linkedin_link": "",
+        "portfolio_link": "",
+        "phone_number": "",
+        "imageURL": ""
+      }
+    
+    
+    ]
+    

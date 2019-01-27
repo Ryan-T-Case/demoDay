@@ -1,20 +1,55 @@
 import axios from "axios";
 
+
 export default {
-  // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books");
+  // api index login 
+  // login ti sign in
+  getUser: function(query) {
+    console.log("runngin running??");
+    return axios.post("/api/signin", query);
   },
-  // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
+  createUser: function(query) {
+    return axios.post("/signup", query);
   },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
+  checkAuth: function(query) {
+    console.log("Query in API = " + JSON.stringify(query));
+    return axios.post("/api/verify", query);
   },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/books", bookData);
-  }
+
+  saveNote: function(query) {
+    return axios.put("/api/users/notes/", query);
+  },
+  getNote: function(query) {
+    return axios.put("/api/users/notes/", query);
+  },
+  getDevs: function(query) {
+    return axios.get("/api/developers", query);
+  },
+
+  getProjects: function(query) {
+    return axios.get("/api/projects", query);
+  },
+  getProject: function(id) {
+    return axios.get("/api/projects/" + id);
+  },
+
+  getAllUsers: function() {
+    return axios.get("/signup");
+  },
+
+  //Project API
+  createProject: function(projectData) {
+    return axios.post("/api/projects", projectData);
+  },
+
+  updateProject: function(projectData, data) {
+    console.log(projectData)
+    return axios.put("/api/projects/" + projectData, data);
+  },  
+
+  //Developers API
+  createDeveloper: function(developerData) {
+    return axios.post("/api/developers", developerData);
+  }  
+
 };

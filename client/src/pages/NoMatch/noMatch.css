@@ -1,0 +1,14 @@
+.fluid404 {
+    padding-top: 5em;
+    height: 50vh;
+    width: 80vw;
+    text-align: center;
+
+}
+.logoDiv{
+    position: absolute;
+}
+.welcomeImgDiv{
+    text-align: center;
+    position: relative;
+}

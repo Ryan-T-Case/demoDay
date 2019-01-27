@@ -1,3 +1,7 @@
+// OK
 module.exports = {
-  Book: require("./book")
-};
+  Project: require("./project"),
+  Developer: require("./developer"),
+  User: require("./User"),
+  UserSession: require("./UserSession")
+  };
