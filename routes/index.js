@@ -37,10 +37,6 @@ router
 .route("/api/developers")
 .post(developersController.create)
 .get(developersController.findAll);
-// .get(developersController.findAll);
-
-router.route("/api/developers")
-.get(devController.findAll);
 
 // 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
 // 00-- LOGIN ROUTES --00

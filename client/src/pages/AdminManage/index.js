@@ -1,10 +1,14 @@
 import React from "react";
+import "./style.css";
 
 function AdminManage() {
     return (
       <div>
-          <div className="row">
-            <div className="col-12">
+          <div className="row text-center">
+            <div className="col-1">
+              <a href="/"><img className="welcomeImg" src="./images/demoDayBeer.png" alt="Demo Day Logo" className="home-button"></img></a>
+            </div>
+            <div className="col-11">
                 <h1>Event Manager</h1>
             </div>
           </div>
