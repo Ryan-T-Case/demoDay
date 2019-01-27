@@ -18,14 +18,12 @@ const notesController = require("../controllers/notesController");
 router
 .route("/api/projects")
 .post(projectsController.create)
+.get(projectsController.findAll);
 
 router
 .route("/api/projects/:id")
 .put(projectsController.update)
 .get(projectsController.findProject);
-
-router.route("/api/projects")
-.get(projectsController.findAll);
 
 // router
 // .route("/api/project/:id")
@@ -37,7 +35,8 @@ router.route("/api/projects")
 //Create a new developer
 router
 .route("/api/developers")
-.post(developersController.create);
+.post(developersController.create)
+.get(developersController.findAll);
 // .get(developersController.findAll);
 
 router.route("/api/developers")
@@ -76,7 +75,10 @@ router
 .route("/logout")
 .post(loginController.logout);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d265f0654fc08bea16ec9a074df4b5234ce7a74f
 // 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
 // 00-- NOTES --00
 router
