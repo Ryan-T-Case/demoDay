@@ -3,7 +3,6 @@ const path = require("path");
 const router = require("express").Router();
 // const apiRoutes = require("./api");
 const loginController = require("../controllers/loginController");
-const devController = require ("../controllers/devController");
 
 // API Routes
 const developersController = require("../controllers/developersController");
@@ -11,6 +10,9 @@ const projectsController = require("../controllers/projectsController");
 const notesController = require("../controllers/notesController");
 
 //API Routes
+
+// 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
+// 00-- PROJECT ROUTES --00
 
 //Create a new project
 router
@@ -29,11 +31,20 @@ router.route("/api/projects")
 // .route("/api/project/:id")
 // .get(projectsController.findProject);
 
+// 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
+// 00-- DEV ROUTES --00
+
 //Create a new developer
 router
 .route("/api/developers")
-.post(developersController.create)
+.post(developersController.create);
 // .get(developersController.findAll);
+
+router.route("/api/developers")
+.get(devController.findAll);
+
+// 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
+// 00-- LOGIN ROUTES --00
 
 //User Routes
 
@@ -65,10 +76,6 @@ router
 .route("/logout")
 .post(loginController.logout);
 
-// 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
-// 00-- GETDEVS --00
-router.route("/api/developers")
-.get(devController.findAll);
 
 // 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
 // 00-- NOTES --00
@@ -76,6 +83,9 @@ router
 .route("api/users/notes/")
 .put(notesController.saveNote)
 .get(notesController.getNote);
+
+
+
 
 //If no API routes are hit, send the React app
 router.use(function(req, res) {
