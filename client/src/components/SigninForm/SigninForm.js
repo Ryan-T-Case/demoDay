@@ -13,10 +13,6 @@ class SigninForm extends Component {
         // Getting the value and name of the input which triggered the change
         let value = event.target.value;
         const name = event.target.name;
-    
-        // if (name === "password") {
-        //   value = value.substring(0, 15);
-        // }
         // Updating the input's state
         this.setState({
           [name]: value
@@ -55,6 +51,10 @@ class SigninForm extends Component {
         this.setState({isLoggedIn: true, });
         this.setState({ loginMsg: res.data.message});
         window.localStorage.setItem("SMC_authkey", res.data.token);
+
+        // save username to session
+        sessionStorage.setItem("userData", this.state.userName);
+        
         window.location.assign('/view-event');
       } else {
         console.log("failure");

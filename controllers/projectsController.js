@@ -25,7 +25,7 @@ module.exports = {
         console.log(`findProject Controller: ${req.params.id}`);
         db.Project
         .findById(req.params.id)
-        .populate("Developer")
+        .populate("_developers")
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     }

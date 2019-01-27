@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../../src/utils/API";
-import {BrowserRouter as Router,Link,
+import {
+  BrowserRouter as Router, Link,
   // Route,
   // Switch,
 } from 'react-router-dom';
@@ -20,31 +21,37 @@ class ViewEvent extends Component {
 
 
   componentDidMount() {
+    // LOAD ALL PROJECTS
     this.loadProjects();
-    
-      let readToken = window.localStorage.getItem("SMC_authkey");
-      console.log("Token Read = " + readToken);
-      let query = {
-        token: readToken
-      };
-      API.checkAuth(query)
-        .then(res => {
-          if (res.data.success) {
-            console.log("in success handle");
-            this.setState({ isLoggedIn: true, 
+
+    // CHECK FOR VALID USER
+    let readToken = window.localStorage.getItem("SMC_authkey");
+    console.log("Token Read = " + readToken);
+    let query = {
+      token: readToken
+    };
+    API.checkAuth(query)
+      .then(res => {
+        if (res.data.success) {
+          console.log("in success handle");
+          // SAVE USER NAME TO SESSION
+          const currentUser = sessionStorage.getItem("userData");
+          this.setState({
+            currentUser: currentUser,
+            isLoggedIn: true,
             // userID:
           });
-            // window.location.assign('/view-event');
-          } else {
-            console.log("in failure handle");
-            this.setState({ isLoggedIn: false });
-            window.location.assign('/sign-in');
-            console.log("ERROR:  Would redirect to login.")
-          };
-        })
-          .catch (err => console.log(err));
-    }
-  
+          // window.location.assign('/view-event');
+        } else {
+          console.log("in failure handle");
+          this.setState({ isLoggedIn: false });
+          window.location.assign('/sign-in');
+          console.log("ERROR:  Would redirect to login.")
+        };
+      })
+      .catch(err => console.log(err));
+  }
+
 
   loadProjects = () => {
     API.getProjects()
@@ -78,7 +85,7 @@ class ViewEvent extends Component {
 
               <Link to={`/project-detail/${project._id}`}>
                 <li className="project list-group-item"
-                  
+
                 >
 
                   <ProjectCard
