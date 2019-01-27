@@ -35,35 +35,11 @@ loadProject = () => {
   .then(res => {
     console.log(`loadProjectmethod: ${JSON.stringify(res.data)}`);
     this.setState({
-      projectName: res.data.name
+      projectName: res.data.name,
+      developers: res.data._developers
       
     })
-  //   res.data._developers.forEach(function(developer) {
-  //     API.getDev(developer._id)
-  //     .then( red => {
-  //       console.log(developer);
-      
-  //   })
-  // })
 })
-}
-  loadDevs = () => {
-    API.getDevs(this.props.match.params.project)
-    .then(res => {
-      console.log(res.data);
-    this.setState({
-      developers: res.data
-      // name: res.data.name,
-      // githubLink: res.data.github_link,
-      // linkedinLink: res.data.linkedin_link,
-      // portfolioLink: res.data.portfolio_link,
-      // phoneNumber: res.data.phone_number,
-      // imageURL: res.data.imageURL,
-      // interview_count: res.data.interview_count
-      
-    })
-  }
-  )
   
     .catch(err => console.log(`loadDevs function ${err}`));
     };
