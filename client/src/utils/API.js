@@ -11,6 +11,10 @@ export default {
     console.log("runngin running??");
     return axios.post("/api/signin", query);
   },
+  getUserName: function(query) {
+    console.log(`getUserName query: ${query}`)
+    return axios.get("/api/users", query);
+  },
   createUser: function(query) {
     return axios.post("/signup", query);
   },

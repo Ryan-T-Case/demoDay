@@ -4,6 +4,9 @@ import DevCard from "../../components/DevCard/DevCard";
 import "./style.css"
 import BlurBox from "../../components/BlurBox/BlurBox.js";
 import Notepad from "../../components/Notepad";
+import NexmoMsg from "../../components/NexmoMsg";
+
+// import mongoose from "mongoose";
 // import Developers from "../../../src/developers.json";
 
 
@@ -15,7 +18,11 @@ class ProjectDetail extends Component {
 
     currentUser: "",
 
+    currentUserId: "",
+
     projectName: "",
+
+    myObjectId: "",
 
     developers: [],
 
@@ -29,9 +36,10 @@ class ProjectDetail extends Component {
 
 
   componentDidMount() {
-    // GRAB CURRENT PROJECT
+      // Grab Current Project
     this.loadProject();
-    // CHECK FOR VALID USER
+
+    // check for valid signin
     let readToken = window.localStorage.getItem("SMC_authkey");
     console.log("Token Read = " + readToken);
     let query = {
@@ -41,14 +49,14 @@ class ProjectDetail extends Component {
       .then(res => {
         if (res.data.success) {
           console.log("in success handle");
-
-          // SAVE USER TO SESSIONSTORAGE
+          const currentUserId = sessionStorage.getItem("userId");
           const currentUser = sessionStorage.getItem("userData");
           this.setState({
             currentUser: currentUser,
-            isLoggedIn: true,
-            // userID:
-          });
+            currentUserId: currentUserId,
+           isLoggedIn: true, 
+          // userID:
+        });
           // window.location.assign('/view-event');
         } else {
           console.log("in failure handle");
@@ -57,20 +65,59 @@ class ProjectDetail extends Component {
           console.log("ERROR:  Would redirect to login.")
         };
       })
-      .catch(err => console.log(err));
+        .catch (err => console.log(err));
   }
+
 
   // LOAD ALL DEVS FROM THE DB
   loadProject = () => {
     API.getProject(this.props.match.params.project)
+
       .then(res => {
+
         console.log(`loadProjectmethod: ${JSON.stringify(res.data)}`);
+
         this.setState({
           projectName: res.data.name,
           developers: res.data._developers
-
+          // myObjectId: res.data._developers
+          // mongoose.Types.ObjectId(res.data._developers[1])
         })
-      })
+
+        // console.log(this.state.myObjectId);
+
+        // API.getDev(this.state.myObjectId)
+        //   .then(res => {
+        //     console.log(`loadDev method: ${JSON.stringify(res.data)}`);
+        //     this.setState({
+        //       developers: res.data
+              //   res.data._developers.forEach(function(developer) {
+              //     API.getDev(developer._id)
+              //     .then( red => {
+              // console.log(developers);
+
+                })
+            //   })
+
+            // })
+          
+  // loadDev = (id) => {
+  //   API.getDev(id)
+  //   .then(res => {
+  //     console.log(`loadDev method: ${JSON.stringify(res.data)}`);
+  //   this.setState({
+  //     developers: res.data
+      // name: res.data.name,
+      // githubLink: res.data.github_link,
+      // linkedinLink: res.data.linkedin_link,
+      // portfolioLink: res.data.portfolio_link,
+      // phoneNumber: res.data.phone_number,
+      // imageURL: res.data.imageURL,
+      // interview_count: res.data.interview_count
+
+    // })
+  // }
+  //     )
 
       .catch(err => console.log(`loadDevs function ${err}`));
   };
@@ -118,6 +165,8 @@ class ProjectDetail extends Component {
                     portfolioLink={developer.portfolio_link}
                     imageURL={developer.imageURL}
                   />
+                   <NexmoMsg 
+                    to={developer.phoneNumber}/>
                 </li>
               ))}
             </ul>

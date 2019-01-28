@@ -54,7 +54,7 @@ class ViewEvent extends Component {
 
 
   loadProjects = () => {
-    API.getProjects()
+    API.getAllProjects()
       .then(res =>
         this.setState({
           projects: res.data
