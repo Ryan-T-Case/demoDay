@@ -51,5 +51,10 @@ export default {
   getAllDevs: function() {
     return axios.get("/api/developers");
   },
+  
+  incrementDevInterviews: function(devId) {
+    console.log(devId)
+    return axios.put("/api/developers/" + devId);
+  }
 
 };

@@ -117,6 +117,7 @@ class ProjectDetail extends Component {
                     githubLink={developer.github_link}
                     portfolioLink={developer.portfolio_link}
                     imageURL={developer.imageURL}
+                    devId={developer._id}
                   />
                 </li>
               ))}

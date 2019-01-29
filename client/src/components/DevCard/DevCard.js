@@ -27,7 +27,8 @@ function DevCard(props) {
             <img className="devIcons" alt="contact developer" src="./images/UR-Icon.png" />
             </a> */}
             <NexmoMsg 
-            to={props.phoneNumber}/>
+            to={props.phoneNumber}
+            devId={props.devId}/>
         </div>
         
     </div>

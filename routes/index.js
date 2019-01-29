@@ -20,6 +20,7 @@ router
 .post(projectsController.create)
 .get(projectsController.findAll);
 
+//Find and update by id
 router
 .route("/api/projects/:id")
 .put(projectsController.update)
@@ -37,6 +38,11 @@ router
 .route("/api/developers")
 .post(developersController.create)
 .get(developersController.findAll);
+
+//Update by id
+router.route("/api/developers/:id")
+.put(developersController.update);
+
 
 // 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
 // 00-- LOGIN ROUTES --00

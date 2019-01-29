@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./nexmoMsg.css";
 import Nexmo from "nexmo";
+import API from "../../utils/API";
 
 class NexmoMsg extends Component {
   state = {
@@ -48,6 +49,11 @@ showMsg = event => {
       const from = "17203866288"
 
       // nexmo.message.sendSms(from, to, msg)
+
+      //Method to increment interview count under the developer
+      API.incrementDevInterviews(this.props.devId)
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err))
   }
 
   renderNexmoContainer(props) {
@@ -56,9 +62,9 @@ showMsg = event => {
       <div className="nexmoContainer"
         isVisible={this.state.isVisible}>
             <div className="nexmoMsg">
-            <p>{props.userName} from {props.company} has requested an interview with you. Contact them at {props.phoneNumber}</p>
+            <p>props.userName from props.company has requested an interview with you. Contact them at props.phoneNumber</p>
             <button
-            className=" btn btn-sm"
+            className="btn btn-sm"
             onClick={this.makeContact}
             >Send</button>
             </div>
