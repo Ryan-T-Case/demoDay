@@ -11,7 +11,7 @@ function DevCard(props) {
             </div>
         
         <div>
-            <p className="devName">
+            <p className="dev-Name">
             <strong>{props.name}</strong>
             </p>
             <a className="devLinks" href={props.linkedinLink}>
