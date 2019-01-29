@@ -8,6 +8,7 @@ const loginController = require("../controllers/loginController");
 const developersController = require("../controllers/developersController");
 const projectsController = require("../controllers/projectsController");
 const notesController = require("../controllers/notesController");
+const userController = require("../controllers/userController");
 
 //API Routes
 
@@ -76,6 +77,12 @@ router
 router
 .route("/logout")
 .post(loginController.logout);
+
+// 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
+// 00-- FIND USER INFO --00
+router
+.route("/api/users/:user")
+.get(userController.getUserName);
 
 
 // 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-

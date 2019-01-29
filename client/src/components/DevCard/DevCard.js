@@ -23,12 +23,6 @@ function DevCard(props) {
             <a className="devLinks" href={props.portfolioLink}>
             <img className="devIcons" alt="portfolio" src="../images/portfolio.png" />
             </a>
-            {/* <a className="contactLinks" href={props.contact}>
-            <img className="devIcons" alt="contact developer" src="./images/UR-Icon.png" />
-            </a> */}
-            <NexmoMsg 
-            to={props.phoneNumber}
-            devId={props.devId}/>
         </div>
         
     </div>
