@@ -105,6 +105,10 @@ console.log(this.state.currentUser)
 
 
     makeContact = event => {
+        //Method to increment interview count under the developer
+        API.incrementDevInterviews(this.props.devId)
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
         const nexmo = new Nexmo({
             apiKey: "285c3b39",
             apiSecret: "wDmJ5xiRYKuy9Nb2"
@@ -136,7 +140,7 @@ console.log(this.state.currentUser)
                 <div className="nexmoContainer"
                     isVisible={this.state.isVisible}>
                     <div className="nexmoMsg">
-                        <p>{this.state.currentUser} from {this.state.company} <br />has requested <br />an interview with you. <br />Please contact them at {this.state.phoneNumber}</p>
+                        <p className="bg-light border border-dark rounded nexmoText">{this.state.currentUser} from {this.state.company} <br />has requested <br />an interview with you. <br />Please contact them at {this.state.phoneNumber}</p>
                         <button
                             className="makeContactBtn btn btn-sm"
                             onClick={this.makeContact}

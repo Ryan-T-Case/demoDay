@@ -5,3 +5,7 @@
     height: 10em;
     width: 21em;
 }
+.back-button {
+    right: 0;
+    top: 0;
+}

@@ -3,4 +3,10 @@
     float: right;
     text-align: right;
     font-size: 1rem;
-    }
+}
+
+.nexmoText {
+    color: #de8784;
+    font-weight: 1000;
+    padding: 1%;
+}

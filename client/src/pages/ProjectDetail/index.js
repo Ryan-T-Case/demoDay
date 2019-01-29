@@ -138,6 +138,9 @@ class ProjectDetail extends Component {
     return (
       <div className="container">
         <div>
+          <a href="/view-event"><button className="btn btn-lg back-button">Back to Projects</button></a>
+        </div>
+        <div>
           <img className="uOfRLogo" src="../images/UofRproStudies.png" alt="University of Richmond logo" />
         </div>
 
@@ -166,7 +169,9 @@ class ProjectDetail extends Component {
                     imageURL={developer.imageURL}
                   />
                    <NexmoMsg 
-                    phoneNumber={developer.phone_number}/>
+                    phoneNumber={developer.phone_number}
+                    devId={developer._id}
+                    />
                 </li>
               ))}
             </ul>

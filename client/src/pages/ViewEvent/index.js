@@ -72,6 +72,9 @@ class ViewEvent extends Component {
     return (
       // <Router>
       <div>
+        <div>
+          <a href="/"><button className="btn btn-lg back-button">Sign Out</button></a>
+        </div>
         <p>Welcome {}</p>
 
         <div className="eventLogo">
