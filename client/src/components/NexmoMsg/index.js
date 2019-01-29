@@ -4,6 +4,11 @@ import Nexmo from "nexmo";
 import API from "../../utils/API";
 
 class NexmoMsg extends Component {
+    constructor(props) { 
+        super(props);
+        console.log(this.props)
+        console.log(this.props.phoneNumber)
+    }
     state = {
         to: "",
         msg: "",
@@ -14,8 +19,10 @@ class NexmoMsg extends Component {
         company: "",
         phoneNumber: "",
 
-        mode: 'hide'
+        mode: 'hide',
+        clicked: 'false'
     }
+
 
     componentDidMount() {
         const currentUserId = sessionStorage.getItem("userId");
@@ -23,40 +30,32 @@ class NexmoMsg extends Component {
           this.setState({
             currentUser: currentUser,
             currentUserId: currentUserId,
+            // to: {props.phoneNumber}
         })
+
+        this.getUserName(currentUser);
+
+
+
 // this.getUserSetState(this.state.currentUser)
 console.log(this.state.currentUser)
-        API.getUserName(currentUser)
-            .then(res => {
-                console.log(this.state.currentUser)
-                console.log(`getUser: ${JSON.stringify(res.data)}`);
-
-                this.setState({
-                    name: res.data.userName,
-                    company: res.data.company,
-                    phoneNumber: res.data.phoneNumber
-                    // myObjectId: res.data._developers
-                    // mongoose.Types.ObjectId(res.data._developers[1])
-                })
-            })
     }
 
-    getUserSetState = () => {
-        API.getUserName()
-        .then(res => {
-            console.log(this.state.currentUser)
-            console.log(`getUser: ${JSON.stringify(res.data)}`);
+    getUserName = (query) => {
+    API.getUserName(query)
+    .then(res => {
+        console.log(this.state.currentUser)
+        console.log(`getUser: ${JSON.stringify(res.data)}`);
 
-            this.setState({
-                name: res.data.userName,
-                company: res.data.company,
-                phoneNumber: res.data.phoneNumber
-                // myObjectId: res.data._developers
-                // mongoose.Types.ObjectId(res.data._developers[1])
-            })
+        this.setState({
+            name: res.data.userName,
+            company: res.data.company,
+            phoneNumber: res.data.phoneNumber
+            // myObjectId: res.data._developers
+            // mongoose.Types.ObjectId(res.data._developers[1])
         })
-    }
-
+    })
+}
 
     handleInputChange = event => {
         let value = event.target.value;
@@ -82,8 +81,7 @@ console.log(this.state.currentUser)
         this.setState({
             mode: 'view',
             currentUser: currentUser,
-            msg: `${this.state.userName} from ${this.state.company} has requested an interview with you. Please contact them at ${this.state.phoneNumber}`
-
+            msg: `${this.state.currentUser} from ${this.state.company} has requested an interview with you. Please contact them at ${this.state.phoneNumber}`
         })
 
     }
@@ -94,17 +92,43 @@ console.log(this.state.currentUser)
         })
     }
 
+    // handleInputChange = event => {
+    //     // Getting the value and name of the input which triggered the change
+    //     let value = event.target.value;
+    //     const name = event.target.name;
+    //     // Updating the input's state
+    //     this.setState({
+    //       [name]: value
+    //     });
+    //   };
+
+
+
     makeContact = event => {
         const nexmo = new Nexmo({
             apiKey: "285c3b39",
             apiSecret: "wDmJ5xiRYKuy9Nb2"
         });
-        const from = "17203866288"
-        let msg = `${this.state.userName} from ${this.state.company} has requested an interview with you. Please contact them at ${this.state.phoneNumber}`
-        let to = this.state.to
+        if (this.state.clicked = false) {
+        const msg = `${this.state.currentUser} from ${this.state.company} has requested an interview with you. Please contact them at ${this.state.phoneNumber}`
+        const from = "17203866288";
+        const to = this.props.phoneNumber
 
         nexmo.message.sendSms(from, to, msg)
+
+        this.setState({
+            clicked: 'true'
+        })
+    }else {
+        return (
+            <div>Developer has been contacted</div>
+        )
+        
     }
+        
+    }
+
+    
 
     renderNexmoContainer() {
         if (this.state.mode === 'view') {
@@ -114,8 +138,10 @@ console.log(this.state.currentUser)
                     <div className="nexmoMsg">
                         <p>{this.state.currentUser} from {this.state.company} <br />has requested <br />an interview with you. <br />Please contact them at {this.state.phoneNumber}</p>
                         <button
-                            className=" btn btn-sm"
+                            className="makeContactBtn btn btn-sm"
                             onClick={this.makeContact}
+                            clicked={this.state.clicked}
+                            value={this.props.phoneNumber}
                         >Send</button>
                     </div>
                 </div>)

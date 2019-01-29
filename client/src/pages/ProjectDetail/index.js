@@ -166,7 +166,7 @@ class ProjectDetail extends Component {
                     imageURL={developer.imageURL}
                   />
                    <NexmoMsg 
-                    to={developer.phoneNumber}/>
+                    phoneNumber={developer.phone_number}/>
                 </li>
               ))}
             </ul>

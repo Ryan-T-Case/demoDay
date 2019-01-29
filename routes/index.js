@@ -79,7 +79,7 @@ router
 // 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
 // 00-- FIND USER INFO --00
 router
-.route("/api/users")
+.route("/api/users/:user")
 .get(userController.getUserName);
 
 

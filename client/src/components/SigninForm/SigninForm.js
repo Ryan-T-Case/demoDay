@@ -53,7 +53,7 @@ class SigninForm extends Component {
         window.localStorage.setItem("SMC_authkey", res.data.token);
 
         // save username to session
-        sessionStorage.setItem("userData", this.state.userName);
+        sessionStorage.setItem("userData", this.state.userName.toLowerCase());
         
         window.location.assign('/view-event');
       } else {
